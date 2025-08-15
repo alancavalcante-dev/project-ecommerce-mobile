@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, StyleSheet, FlatList, TouchableOpacity, ActivityIndicator, SafeAreaView } from 'react-native';
 import { Stack, useLocalSearchParams, useRouter } from 'expo-router';
-import { fetchProductsByCategory, Product } from '../../services/api'; // Importa a função e o tipo da API
-import ProductCard from './../components/ProductCard'; // Importa o nosso novo componente
+import { fetchProductsByCategory, Product } from '../../services/api'; 
+import ProductCard from './../components/ProductCard';
 
 export default function ProdutosScreen() {
   const [selectedTab, setSelectedTab] = useState<'MASCULINO' | 'FEMININO'>('MASCULINO');
@@ -58,7 +58,7 @@ export default function ProdutosScreen() {
       ) : (
         <FlatList
           data={products}
-          renderItem={({ item }) => <ProductCard item={item} user={user} />} // Usa o componente importado
+          renderItem={({ item }) => <ProductCard item={item} user={user} />} 
           keyExtractor={(item) => item.id.toString()}
           numColumns={2}
           contentContainerStyle={styles.list}

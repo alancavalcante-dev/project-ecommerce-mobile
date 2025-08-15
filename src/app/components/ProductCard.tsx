@@ -2,9 +2,8 @@ import React from 'react';
 import { Text, TouchableOpacity, Image, StyleSheet, View } from 'react-native';
 import { Link } from 'expo-router';
 
-// Define as propriedades que o componente espera receber
 interface ProductCardProps {
-  user?: string | string[]; // O nome do usuário é opcional
+  user?: string | string[]; 
 }
 
 const ProductCard = ({ item, user }: ProductCardProps) => {

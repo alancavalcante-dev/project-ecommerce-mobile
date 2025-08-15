@@ -1,7 +1,5 @@
 import axios from 'axios';
 
-// --- TIPOS DE DADOS ---
-// Define a estrutura de um produto na lista
 export interface Product {
   id: number;
   title: string;
@@ -10,19 +8,16 @@ export interface Product {
   thumbnail: string;
 }
 
-// Define a estrutura dos detalhes de um produto
 export interface ProductDetails extends Product {
   discountPercentage: number;
   images: string[];
 }
 
-// --- CATEGORIAS ---
 const CATEGORIAS = {
   MASCULINO: ['mens-shirts', 'mens-shoes', 'mens-watches'],
   FEMININO: ['womens-bags', 'womens-dresses', 'womens-jewellery', 'womens-shoes', 'womens-watches'],
 };
 
-// --- FUNÇÕES DA API ---
 
 /**
  * Busca uma lista de produtos com base na categoria selecionada (Masculino/Feminino).
@@ -40,7 +35,7 @@ export const fetchProductsByCategory = async (selectedTab: 'MASCULINO' | 'FEMINI
     return allProducts;
   } catch (error) {
     console.error("Erro ao buscar produtos por categoria:", error);
-    return []; // Retorna um array vazio em caso de erro
+    return []; 
   }
 };
 
