@@ -39,14 +39,18 @@ Siga os passos abaixo para rodar o projeto localmente:
 
 1.  **Clone o repositório:**
     ```bash
-    git clone [https://github.com/seu-usuario/nome-do-repositorio.git](https://github.com/seu-usuario/nome-do-repositorio.git)
+    git clone [https://github.com/alancavalcante-dev/project-ecommerce-mobile.git](https://github.com/alancavalcante-dev/project-ecommerce-mobile.git)
     ```
 
 2.  **Navegue até a pasta do projeto:**
     ```bash
-    cd nome-do-repositorio
+    cd project-ecommerce-mobile
     ```
 
+3.  **Inicie o servidor de desenvolvimento do Expo:**
+    ```bash
+    npm install
+    ```
 
 
 4.  **Inicie o servidor de desenvolvimento do Expo:**
@@ -66,9 +70,9 @@ A estrutura de pastas principal do projeto é organizada da seguinte forma, util
 
 -   **`src/app/`**: Diretório raiz para todas as rotas do aplicativo.
 -   **`src/app/index.tsx`**: É a primeira tela que o usuário vê (Login).
--   **`src/app/produtos/`**: Contém todas as telas relacionadas à funcionalidade de produtos.
--   **`src/app/produtos/_layout.tsx`**: Define o tipo de navegação para um grupo de rotas (neste caso, uma pilha ou "Stack").
--   **`src/app/produtos/[id].tsx`**: É uma rota dinâmica que captura o ID do produto a partir da URL.
+-   **`src/app/produtos`**: Contém todas as telas relacionadas à funcionalidade de produtos.
+-   **`src/app/components`**: Componentes para facilitar e ter flexibilidade para reutilizar códigos.
+-   **`src/services`**: Serviços externos, como consulta de API.
 
 ---
 
